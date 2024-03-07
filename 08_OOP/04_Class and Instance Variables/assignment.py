@@ -1,26 +1,38 @@
 class Rectangle:
+
+    counter = 0
+    
+    def get_count():
+        return Rectangle.get_count
+
     def __init__(self, base: float, height: float) -> None:
-        if(base < 0):
-            self.__base = 0
-        else:       
-            self.__base = base
-            
-        if(height < 0):
-            self.__height = 0
-        else:
-            self.__height = height
+        self.__base = base
+        self.__height = height
         
     def get_height(self) -> float:
         return self.__height
     
-    #YOUDO the get_base method
+    def get_base(self) -> float:
+        return self.__base
     
     def get_perimeter(self) -> float:
         return 2 * self.__base + 2 * self.__height
     
-    #Youdo get_area method
+    def get_area(self) -> float:
+        return 2 * self.__base + 2 * self.__height
  
  
- 
-#YOUDO>  create two rectangles.  print their base, height, perimeter, and area
-#using only the methods not the fields/property/attributes
+rectangle1 = Rectangle(3.0, 4.0)
+
+print("the base is " , rectangle1.get_base)
+print("the height is", rectangle1.get_height)
+print("the perimeter is", rectangle1.get_perimeter)
+print("the area is", rectangle1.get_area)
+
+Rectangle2 = Rectangle(4.0, 3.0)
+print("the base is " , Rectangle2.get_base)
+print("the height is", Rectangle2.get_height)
+print("the perimeter is", Rectangle2.get_perimeter)
+print("the area is", Rectangle2.get_area)
+
+print("the result")
